@@ -1,0 +1,52 @@
+<div class="tot container-fluid" id="corsi">
+<div class="top row">
+  <h2>Corsi</h2>
+  <div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="all" data-bs-toggle="tab" data-bs-target="#0" role="tab" type="button" aria-controls="0" aria-selected="true">Tutti i corsi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fe" data-bs-toggle="tab" data-bs-target="#1" role="tab" type="button" aria-controls="1" aria-selected="true">Front-end</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="be" data-bs-toggle="tab" data-bs-target="#2" role="tab" type="button" aria-controls="2" aria-selected="true">Back-end</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fs" data-bs-toggle="tab" data-bs-target="#3" role="tab" type="button" aria-controls="3" aria-selected="true">Full-stack</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="cs" data-bs-toggle="tab" data-bs-target="#4" role="tab" type="button" aria-controls="4" aria-selected="true">Cyber Security</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content" id="myTabContent">
+    <div id="0" class="tab-pane fade show active" role="tabpanel" aria-labelledby="all" tabindex="0">
+      <div class="row">
+          <app-card class="col-6" *ngFor="let corso of corsi" [data]="corso"> </app-card>
+      </div>
+    </div>
+    <div id="1" class="tab-pane fade" role="tabpanel" aria-labelledby="fe" tabindex="0">
+      <div class="row">
+            <app-card class="col-6" *ngFor="let corso of corsiFe" [data]="corso"> </app-card>
+      </div>
+    </div>
+    <div id="2" class="tab-pane fade" role="tabpanel" aria-labelledby="be" tabindex="0">
+      <div class="row">
+          <app-card class="col-6" *ngFor="let corso of corsiBe" [data]="corso"> </app-card>
+      </div>
+    </div>
+    <div id="3" class="tab-pane fade" role="tabpanel" aria-labelledby="fs" tabindex="0">
+      <div class="row">
+          <app-card class="col-6" *ngFor="let corso of corsiFs" [data]="corso"> </app-card>
+    </div>
+    </div>
+    <div id="4" class="tab-pane fade" role="tabpanel" aria-labelledby="cs" tabindex="0">
+      <div class="row">
+          <app-card class="col-6" *ngFor="let corso of corsiCs" [data]="corso"> </app-card>
+      </div>
+    </div>
+</div>
+</div>
+</div>

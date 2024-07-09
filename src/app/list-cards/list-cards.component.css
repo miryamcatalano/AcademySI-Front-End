@@ -1,0 +1,36 @@
+.tot{
+  margin-top: 10vh;
+  padding: 5vh;
+  background: #0567a3;
+}
+.top{
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+}
+.top h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 4vw;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.card{
+  background-color: #f38f1c;
+}
+.nav-link{
+  margin: 1vh;
+  background-color: rgba(11, 106, 165, 0.6);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.nav-tabs .nav-link.active{
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(11, 106, 165, 0.82);
+  border-color: rgba(11, 106, 165, 0.82);
+  padding-bottom: 2.5vh;
+}
+.row{
+  width: 100%;
+}

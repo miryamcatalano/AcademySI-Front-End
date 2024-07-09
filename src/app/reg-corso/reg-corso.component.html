@@ -1,0 +1,41 @@
+<div class="register container ">
+  <div class="box ">
+    <h2 class="text-center">Registrazione nuovo corso</h2>
+    <form>
+      <div class="d-flex flex-row">
+        <div class="form-group w-50">
+          <label for="usernameCorso">Nome corso</label>
+          <input [(ngModel)]="this.corsoRegisterRequest.name" name="name" type="text" class="form-control text-start" id="usernameCorso" placeholder="Inserisci il nome del corso" required>
+        </div>
+        <div class="form-group w-50">
+          <label for="shortDesc">Descrizione breve</label>
+          <input [(ngModel)]="this.corsoRegisterRequest.shortDesc" name="shortDesc" type="text" class="form-control text-start" id="shortDesc" placeholder="Inserisci la descrizione breve" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="longDesc">Descrizione completa</label>
+        <br>
+        <textarea [(ngModel)]="this.corsoRegisterRequest.longDesc" name="longDesc" class="form-control text-start" id="longDesc" placeholder="Inserisci la descrizione completa" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="durata">Durata (in ore)</label>
+        <input [(ngModel)]="this.corsoRegisterRequest.durata" name="durata" type="number" class="form-control text-start" id="durata" placeholder="Inserisci la durata" required>
+      </div>
+      <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <br>
+          <fieldset class="form-control text-start pt-3" id="categoria" required>
+            <ul>
+              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Front-End'" name="categoria" type="radio" checked> Front-End</li>
+              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Back-End'" name="categoria" type="radio"> Back-End</li>
+              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Full-Stack'" name="categoria" type="radio"> Full-Stack</li>
+              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Cyber Security'" name="categoria" type="radio"> Cyber Security</li>
+            </ul>
+          </fieldset>
+      </div>
+      <div class="text-end">
+        <button type="submit" class="btn btn-secondary mt-3 btn-block">Registra corso</button>
+      </div>
+    </form>
+  </div>
+</div>

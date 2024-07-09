@@ -1,0 +1,35 @@
+.navbar{
+  background-color: #095788;
+  margin-bottom: 50vh;
+}
+.box{
+  width: 100%;
+}
+
+.navbar-brand img{
+  width: 12vw;
+  margin-left: 2vw;
+}
+
+.menu{
+  margin-right: 2vw;
+}
+
+.nav-link{
+  color: #e1f3ff !important;
+  font-size: large;
+}
+
+.login{
+  border: 1px solid #e1f3ff;
+  background-color: #e1f3ff;
+  color: #0b6aa5;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.dropdown-menu{
+  margin-right: 1vh;
+}

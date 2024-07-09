@@ -1,0 +1,17 @@
+.register{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.box{
+  border: solid;
+  padding: 5vh;
+  margin-top: 10vh;
+  width: 50vw;
+}
+.form-control{
+  text-align: center;
+}
+ul{
+  list-style: none;
+}
