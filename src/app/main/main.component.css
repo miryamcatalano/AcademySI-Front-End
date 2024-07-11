@@ -41,36 +41,10 @@
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-
-/*
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
-  padding: 20px;
-  background: rgba(243, 143, 28, 0.7);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  font-family: 'Roboto', sans-serif;
-  color: #0b6aa5;
-}
-
-.carousel-caption h3 {
-  font-size: 4vw;
-  margin-bottom: 20px;
+.btn{
+  background-color: #0b6aa5;
+  border-color: #0b6aa5;
+  color: rgb(0, 0, 0);
   font-weight: bold;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: #f38f1c;
 }
-
-.carousel-caption p {
-  font-size: 1.5vw;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-*/

@@ -1,7 +1,7 @@
 export class CorsoRegisterRequest {
-  name: string;
-  shortDesc: string;
-  longDesc: string;
+  nome: string;
+  descrizione_breve: string;
+  descrizione_completa: string;
   durata: number;
-  categoria: string;
+  idCategoria: number;
 }

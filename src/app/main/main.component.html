@@ -1,12 +1,13 @@
-<div class="main container-fluid" id="main">
+<div class="main container-fluid w-100" id="main">
     <div id="carouselExampleFade" class="carousel h-100 slide carousel-fade">
       <div class="carousel-inner h-100">
         <div class="carousel-item h-100 active">
           <img src="/css.jpg" class="d-block" alt="...">
-          <div class="carousel-caption ">
+          <div class="carousel-caption d-flex flex-column  align-items-center">
             <h3>CSS base</h3>
             <br><br>
-            <p>Non perderti <br> la nostra offerta! <br><br> bla bla bla</p>
+            <p>Non perderti <br> la nostra offerta!</p>
+            <button type="submit" class="btn btn-secondary btn-block mt-5 w-25" (click)="onClick()">LEARN MORE</button>
           </div>
         </div>
         <div class="carousel-item">
@@ -14,7 +15,8 @@
           <div class="carousel-caption ">
             <h3>Cyber Security</h3>
             <br><br>
-            <p>Non perderti <br> la nostra offerta! <br><br> bla bla bla</p>
+            <p>Non perderti <br> la nostra offerta!</p>
+            <button type="submit" class="btn btn-secondary btn-block mt-5 w-25" (click)="onClick()">LEARN MORE</button>
           </div>
         </div>
         <div class="carousel-item">
@@ -22,8 +24,10 @@
           <div class="carousel-caption ">
             <h3>Java avanzato</h3>
             <br><br>
-            <p>Non perderti <br> la nostra offerta! <br><br> bla bla bla</p>
-          </div>        </div>
+            <p>Non perderti <br> la nostra offerta!</p>
+            <button type="submit" class="btn btn-secondary btn-block mt-5 w-25" (click)="onClick()">LEARN MORE</button>
+          </div>
+        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

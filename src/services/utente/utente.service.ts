@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
-import {Observable, catchError, retry, throwError} from "rxjs";
+import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
+import {Observable, catchError, retry, throwError, of} from "rxjs";
 import {UtenteDto} from "../../model/utenteDto";
+import {RegisterRequest} from "../../model/registerRequest";
+import {CorsoDto} from "../../model/corsoDto";
+import {LoginRequest} from "../../model/loginRequest";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtenteService {
+
+  registerRequest : RegisterRequest = new RegisterRequest();
+
+  loginRequest : LoginRequest = new LoginRequest();
 
   constructor(private http: HttpClient) { }
 
@@ -16,6 +23,32 @@ export class UtenteService {
       catchError(this.handleError)
     );
   }
+
+  registraUtente(utente: RegisterRequest) : Observable<void>{
+    return this.http.post<void>('http://localhost:8080/api/utente/', utente).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
+  }
+
+  loginUtente(utente: LoginRequest) : Observable<void>{
+    return this.http.post<void>('http://localhost:8080/api/utente/login', utente).pipe(
+      retry(3),
+      catchError(err => {
+        console.error("loginError", err);
+        return throwError(err);
+      }),
+    );
+  }
+
+
+ /* addCorso(id: string) : Observable<void>{
+    const options = {}
+    /!*return this.http.get<CorsoDto[]>('http://localhost:8080/api/corsi/search', options).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );*!/
+  }*/
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {

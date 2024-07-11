@@ -1,6 +1,8 @@
 .tot{
+  height: 100vh;
+  margin-right: 0;
   margin-top: 10vh;
-  padding: 5vh;
+  padding: 2vh;
   background: #0567a3;
 }
 .top{
@@ -10,7 +12,7 @@
 }
 .top h2{
   font-family: 'Roboto', sans-serif;
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -33,4 +35,13 @@
 }
 .row{
   width: 100%;
+}
+.search{
+  background-color: #f38f1c;
+  color: #162387;
+}
+.scrollable {
+  height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

@@ -1,21 +1,21 @@
 <div class="register container ">
   <div class="box ">
     <h2 class="text-center">Registrazione nuovo corso</h2>
-    <form>
+    <form (ngSubmit)="onSubmit(form)" #form=ngForm>
       <div class="d-flex flex-row">
         <div class="form-group w-50">
           <label for="usernameCorso">Nome corso</label>
-          <input [(ngModel)]="this.corsoRegisterRequest.name" name="name" type="text" class="form-control text-start" id="usernameCorso" placeholder="Inserisci il nome del corso" required>
+          <input [(ngModel)]="this.corsoRegisterRequest.nome" name="nome" type="text" class="form-control text-start" id="usernameCorso" placeholder="Inserisci il nome del corso" required minlength="3">
         </div>
         <div class="form-group w-50">
           <label for="shortDesc">Descrizione breve</label>
-          <input [(ngModel)]="this.corsoRegisterRequest.shortDesc" name="shortDesc" type="text" class="form-control text-start" id="shortDesc" placeholder="Inserisci la descrizione breve" required>
+          <input [(ngModel)]="this.corsoRegisterRequest.descrizione_breve" name="shortDesc" type="text" class="form-control text-start" id="shortDesc" placeholder="Inserisci la descrizione breve" required minlength="6">
         </div>
       </div>
       <div class="form-group">
         <label for="longDesc">Descrizione completa</label>
         <br>
-        <textarea [(ngModel)]="this.corsoRegisterRequest.longDesc" name="longDesc" class="form-control text-start" id="longDesc" placeholder="Inserisci la descrizione completa" required></textarea>
+        <textarea [(ngModel)]="this.corsoRegisterRequest.descrizione_completa" name="longDesc" class="form-control text-start" id="longDesc" placeholder="Inserisci la descrizione completa" required minlength="50"></textarea>
       </div>
       <div class="form-group">
         <label for="durata">Durata (in ore)</label>
@@ -26,15 +26,12 @@
         <br>
           <fieldset class="form-control text-start pt-3" id="categoria" required>
             <ul>
-              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Front-End'" name="categoria" type="radio" checked> Front-End</li>
-              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Back-End'" name="categoria" type="radio"> Back-End</li>
-              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Full-Stack'" name="categoria" type="radio"> Full-Stack</li>
-              <li><input [(ngModel)]="this.corsoRegisterRequest.categoria" [value]="'Cyber Security'" name="categoria" type="radio"> Cyber Security</li>
-            </ul>
+              <li *ngFor="let categoria of categorie"><input [(ngModel)]="this.corsoRegisterRequest.idCategoria" [value]="categoria.id" name="categoria" type="radio" checked> {{categoria.nome}}</li>
+              </ul>
           </fieldset>
       </div>
       <div class="text-end">
-        <button type="submit" class="btn btn-secondary mt-3 btn-block">Registra corso</button>
+        <button [disabled]="!form.valid" type="submit" class="btn btn-secondary mt-3 btn-block">Registra corso</button>
       </div>
     </form>
   </div>

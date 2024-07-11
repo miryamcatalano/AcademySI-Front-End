@@ -1,35 +1,18 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {CorsoDto} from "../../model/corsoDto";
-import {RegisterRequest} from "../../model/registerRequest";
-import {CorsoRegisterRequest} from "../../model/corsoRegisterRequest";
+import {CategoriaDto} from "../../model/categoriaDto";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CorsoService {
+export class CategoriaService {
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<CorsoDto[]>{
-    return this.http.get<CorsoDto[]>('http://localhost:8080/api/corsi/').pipe(
-      retry(3),
-      catchError(this.handleError)
-    );
-  }
-
-  search(nome : string): Observable<CorsoDto[]>{
-
-    const options = {params : new HttpParams().set('nome', nome)}
-    return this.http.get<CorsoDto[]>('http://localhost:8080/api/corsi/search', options).pipe(
-      retry(3),
-      catchError(this.handleError)
-    );
-  }
-
-  registraCorso(corso: CorsoRegisterRequest) : Observable<void>{
-    return this.http.post<void>('http://localhost:8080/api/corsi/', corso).pipe(
+  getAll(): Observable<CategoriaDto[]>{
+    return this.http.get<CategoriaDto[]>('http://localhost:8080/api/categoria/').pipe(
       retry(3),
       catchError(this.handleError)
     );

@@ -13,8 +13,15 @@ import {CorsoDto} from "../../model/corsoDto";
 })
 export class CardComponent{
 
+  showDescrizioneCompleta = false;
+
   @Input()
   data : CorsoDto = new CorsoDto(' ', ' ', ' ', 0, ' ');
 
 
+  submit() {
+    /*this.utenteService.addCorso(this.id).subscribe((result: CorsoDto[]) => {
+      this.corsi = result;
+    });*/
+  }
 }

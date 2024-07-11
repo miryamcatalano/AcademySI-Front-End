@@ -1,6 +1,12 @@
 <div class="tot container-fluid" id="corsi">
 <div class="top row">
+  <div class="d-flex justify-content-between align-items-center">
   <h2>Corsi</h2>
+  <form class="d-flex h-50" role="search" (submit)="this.search($event)">
+    <input class="form-control me-2" [(ngModel)]="this.nome" name="nome" type="search" placeholder="Cerca corso" aria-label="Search">
+    <button class="btn search" type="submit">Cerca</button>
+  </form>
+  </div>
   <div class="card">
   <div class="card-header">
     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
@@ -23,28 +29,28 @@
   </div>
   <div class="tab-content" id="myTabContent">
     <div id="0" class="tab-pane fade show active" role="tabpanel" aria-labelledby="all" tabindex="0">
-      <div class="row">
-          <app-card class="col-6" *ngFor="let corso of corsi" [data]="corso"> </app-card>
+      <div class="row scrollable">
+          <app-card class="col-4" *ngFor="let corso of corsi" [data]="corso"> </app-card>
       </div>
     </div>
     <div id="1" class="tab-pane fade" role="tabpanel" aria-labelledby="fe" tabindex="0">
       <div class="row">
-            <app-card class="col-6" *ngFor="let corso of corsiFe" [data]="corso"> </app-card>
+            <app-card class="col-4" *ngFor="let corso of corsiFe" [data]="corso"> </app-card>
       </div>
     </div>
     <div id="2" class="tab-pane fade" role="tabpanel" aria-labelledby="be" tabindex="0">
       <div class="row">
-          <app-card class="col-6" *ngFor="let corso of corsiBe" [data]="corso"> </app-card>
+          <app-card class="col-4" *ngFor="let corso of corsiBe" [data]="corso"> </app-card>
       </div>
     </div>
     <div id="3" class="tab-pane fade" role="tabpanel" aria-labelledby="fs" tabindex="0">
       <div class="row">
-          <app-card class="col-6" *ngFor="let corso of corsiFs" [data]="corso"> </app-card>
+          <app-card class="col-4" *ngFor="let corso of corsiFs" [data]="corso"> </app-card>
     </div>
     </div>
     <div id="4" class="tab-pane fade" role="tabpanel" aria-labelledby="cs" tabindex="0">
       <div class="row">
-          <app-card class="col-6" *ngFor="let corso of corsiCs" [data]="corso"> </app-card>
+          <app-card class="col-4" *ngFor="let corso of corsiCs" [data]="corso"> </app-card>
       </div>
     </div>
 </div>
