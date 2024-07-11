@@ -1,17 +1,20 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CorsoService} from "../../services/corso/corso.service";
 import {Router, RouterLink} from "@angular/router";
+import {NgIf} from "@angular/common";
+
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    NgIf
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent{
 
   constructor(private router: Router) {
   }
@@ -27,4 +30,6 @@ export class NavbarComponent {
       this.router.navigate(['/login']);
     }
   }
+
+
 }

@@ -9,6 +9,7 @@
   border: solid;
   padding: 5vh;
   width: 30vw;
+  background-color: #e1f3ff;
 }
 input.ng-dirty.ng-valid{
   border-color: green;

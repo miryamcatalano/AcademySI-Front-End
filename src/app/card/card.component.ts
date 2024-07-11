@@ -11,17 +11,23 @@ import {CorsoDto} from "../../model/corsoDto";
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
-export class CardComponent{
+export class CardComponent implements OnInit {
 
   showDescrizioneCompleta = false;
 
   @Input()
   data : CorsoDto = new CorsoDto(' ', ' ', ' ', 0, ' ');
 
+  ifLogin: boolean = false;
 
-  submit() {
-    /*this.utenteService.addCorso(this.id).subscribe((result: CorsoDto[]) => {
-      this.corsi = result;
-    });*/
+  ngOnInit(): void {
+    if(localStorage.getItem('token')){
+      this.ifLogin = true;
+    }
+
   }
+
+
+
+
 }

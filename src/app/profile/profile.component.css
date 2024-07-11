@@ -1,0 +1,10 @@
+.btn{
+  border: 1px solid #f38f1c;
+  background-color: #f38f1c;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(1, 95, 152, 0.83);  font-size: large;
+  margin-top: 10vh;
+  width: 10vw;
+}
+
